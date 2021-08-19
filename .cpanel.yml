@@ -1,6 +1,6 @@
----
-deployment:
-  tasks:
-    - export DEPLOYPATH=/home/asdhj/public_html/dev
-    - /bin/cp index.html $DEPLOYPATH
-    - /bin/cp * $DEPLOYPATH
+# ---
+# deployment:
+#   tasks:
+#     - export DEPLOYPATH=/home/asdhj/public_html/dev
+#     - /bin/cp index.html $DEPLOYPATH
+#     - /bin/cp * $DEPLOYPATH

@@ -8,7 +8,7 @@ class UserEndPoint extends Generic {
 	{
 		switch ($api_resource_id) {
 			case 'fetch_blocked_users':
-				self::fetch_blocked_users();
+                self::fetch_blocked_users();
 				break;
 			case 'block':
 				self::block_user();

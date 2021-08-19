@@ -82,6 +82,7 @@ class Auth extends Generic {
     }
 
     private function register() {
+    	//echo "Great Job";exit;
 		global $config;
     	if (empty($_POST['username']) || empty($_POST['email']) || empty($_POST['password']) || empty($_POST['conf_password'])) {
 		    $response_data       = array(

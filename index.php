@@ -10,7 +10,8 @@ $app_cont = "apps/$theme/$app/handlers/$apph.php";
 
 if (file_exists($app_cont)) {
 	require_once($app_cont);
-}else{
+}
+else{
 
 }
 
