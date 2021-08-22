@@ -1,12 +1,12 @@
 <?php 
-
 class Auth extends Generic {
 
 
 
 	public function __construct($api_resource_id)
 	{
-		switch ($api_resource_id) {
+		//echo"Anwaar";exit;
+		switch($api_resource_id) {
 			case 'login':
 				self::login();
 				break;
@@ -41,7 +41,7 @@ class Auth extends Generic {
 	}
 
 
-    private function login() {
+    public function login() {
     	if (empty($_POST['username']) || empty($_POST['password'])) {
 		    $response_data       = array(
 		        'code'     => '400',

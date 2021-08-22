@@ -7,7 +7,7 @@ require 'flight-master/flight/Flight.php';
 require 'classes/Login.php';
 // print_r($generic_init);
 // exit();
-// Flight::route('/login', array('Login','login'));
+ //Flight::route('/login', array('Login','login'));
 // Flight::start();
 
  ?>

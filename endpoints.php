@@ -1,4 +1,5 @@
 <?php 
+
 ini_set('display_startup_errors',1);
 ini_set('display_errors',1);
 error_reporting(E_ALL);
@@ -25,9 +26,11 @@ if (empty($_POST['server_key']) || $_POST['server_key'] != $config['server_key']
 $non_allowed = array('password','email_code','login_token','edit');
 
 $allowed = array('Auth','User','Post','Story','Settings','Messages', 'Misc');
-$classes = array('Misc' => 'MiscEndPoint', 'Auth' => 'Auth','User' => 'UserEndPoint','Post' => 'PostsEndPoint','Story' => 'StoryEndPoint','Settings' => 'SettingsEndPoint','Messages' => 'MessagesEndPoint');
-$api               = "endpoint".DIRECTORY_SEPARATOR."$api_version".DIRECTORY_SEPARATOR.$classes[$api_resource].".php"; 
 
+$classes = array('Misc' => 'MiscEndPoint', 'Auth' => 'Auth','User' => 'UserEndPoint','Post' => 'PostsEndPoint','Story' => 'StoryEndPoint','Settings' => 'SettingsEndPoint','Messages' => 'MessagesEndPoint');
+
+$api               = "endpoint".DIRECTORY_SEPARATOR."$api_version".DIRECTORY_SEPARATOR.$classes[$api_resource].".php"; 
+echo $api;
 if (file_exists($api) && in_array($api_resource, $allowed)) {
 	require_once $api;
 
